@@ -14,6 +14,8 @@ class EssayListVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     
     var selectedProfileType = ""
     var selectedEssayType = ""
+    let segueIdentifier = "goToEssayContent"
+    var selectedOpera:Opera?
     
     //    MARK: - Lifecycle Methods
     override func viewDidLoad() {
@@ -29,6 +31,12 @@ class EssayListVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         
     }
     
+    //    MARK: - VC Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as? EssayContentVC
+        destinationVC?.selectedOpera = self.selectedOpera
+    }
+    
     //    MARK: - Delegate methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Database.opere.count
@@ -40,5 +48,10 @@ class EssayListVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         cell.autorOpera.text = Database.opere[indexPath.row].autorulOperei
         cell.genOpera.text = Database.opere[indexPath.row].genulOperei
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedOpera = Database.opere[indexPath.row]
+        performSegue(withIdentifier: segueIdentifier, sender: self)
     }
 }

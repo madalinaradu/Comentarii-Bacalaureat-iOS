@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4AE7EBD2241D88FB00D20517 /* Opera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE7EBD1241D88FB00D20517 /* Opera.swift */; };
 		4AE7EBD4241D89D300D20517 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE7EBD3241D89D300D20517 /* Database.swift */; };
+		4AE7EBD6241D8B6300D20517 /* EssayContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE7EBD5241D8B6300D20517 /* EssayContentVC.swift */; };
 		4AF78C57241D3C4300763A09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF78C56241D3C4300763A09 /* AppDelegate.swift */; };
 		4AF78C59241D3C4300763A09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF78C58241D3C4300763A09 /* SceneDelegate.swift */; };
 		4AF78C5E241D3C4300763A09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AF78C5C241D3C4300763A09 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		4AE7EBD1241D88FB00D20517 /* Opera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opera.swift; sourceTree = "<group>"; };
 		4AE7EBD3241D89D300D20517 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		4AE7EBD5241D8B6300D20517 /* EssayContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayContentVC.swift; sourceTree = "<group>"; };
 		4AF78C53241D3C4300763A09 /* ComentariiBAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComentariiBAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF78C56241D3C4300763A09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AF78C58241D3C4300763A09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				4AF78C6B241D3C6600763A09 /* PrincipalViewController.swift */,
 				4AF78C87241D6FC400763A09 /* SelectEssayVC.swift */,
 				4AF78C8E241D7B5600763A09 /* EssayListVC */,
+				4AE7EBD5241D8B6300D20517 /* EssayContentVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			files = (
 				4AF78C6C241D3C6600763A09 /* PrincipalViewController.swift in Sources */,
 				4AF78C8D241D78FB00763A09 /* EssayListVC.swift in Sources */,
+				4AE7EBD6241D8B6300D20517 /* EssayContentVC.swift in Sources */,
 				4AF78C6E241D3CA200763A09 /* Constante.swift in Sources */,
 				4AE7EBD2241D88FB00D20517 /* Opera.swift in Sources */,
 				4AF78C57241D3C4300763A09 /* AppDelegate.swift in Sources */,

@@ -210,11 +210,80 @@
                     <navigationItem key="navigationItem" id="OrB-St-xOM"/>
                     <connections>
                         <outlet property="essayTableView" destination="yTz-eQ-O8h" id="ukg-pL-Jk4"/>
+                        <segue destination="XBq-pe-FCe" kind="show" identifier="goToEssayContent" id="jh1-vU-7sP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84U-xZ-xMt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2626" y="119"/>
+        </scene>
+        <!--Essay ContentVC-->
+        <scene sceneID="GIk-f1-JuK">
+            <objects>
+                <viewController id="XBq-pe-FCe" customClass="EssayContentVC" customModule="ComentariiBAC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QtG-Xy-MOR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pa-P5-T2C" userLabel="View - Main Content">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Punguta cu 5 bani" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JY8-Gs-zff">
+                                        <rect key="frame" x="0.0" y="40" width="414" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="de Robu De La Baicoi" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tl-Oz-aMX">
+                                        <rect key="frame" x="0.0" y="98.5" width="354" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYJ-3c-03F">
+                                        <rect key="frame" x="40" y="169.5" width="334" height="604.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="JY8-Gs-zff" secondAttribute="trailing" id="1jE-8z-Rnx"/>
+                                    <constraint firstItem="JY8-Gs-zff" firstAttribute="top" secondItem="9pa-P5-T2C" secondAttribute="top" constant="40" id="4P1-VX-zsC"/>
+                                    <constraint firstItem="JY8-Gs-zff" firstAttribute="leading" secondItem="9pa-P5-T2C" secondAttribute="leading" id="4tC-eJ-VOw"/>
+                                    <constraint firstAttribute="trailing" secondItem="zYJ-3c-03F" secondAttribute="trailing" constant="40" id="AOj-8C-0cJ"/>
+                                    <constraint firstItem="1Tl-Oz-aMX" firstAttribute="leading" secondItem="9pa-P5-T2C" secondAttribute="leading" id="AvK-or-O6g"/>
+                                    <constraint firstAttribute="bottom" secondItem="zYJ-3c-03F" secondAttribute="bottom" id="Heq-Tr-lBx"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Tl-Oz-aMX" secondAttribute="trailing" constant="60" id="LvW-lq-Lc9"/>
+                                    <constraint firstItem="zYJ-3c-03F" firstAttribute="leading" secondItem="9pa-P5-T2C" secondAttribute="leading" constant="40" id="gzD-za-j1K"/>
+                                    <constraint firstItem="JY8-Gs-zff" firstAttribute="centerX" secondItem="9pa-P5-T2C" secondAttribute="centerX" id="jTW-4s-loP"/>
+                                    <constraint firstItem="zYJ-3c-03F" firstAttribute="top" secondItem="1Tl-Oz-aMX" secondAttribute="bottom" constant="50" id="pr0-Yd-9Fr"/>
+                                    <constraint firstItem="1Tl-Oz-aMX" firstAttribute="top" secondItem="JY8-Gs-zff" secondAttribute="bottom" constant="20" id="yqo-Ar-fsa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kaU-U7-WTj" firstAttribute="bottom" secondItem="9pa-P5-T2C" secondAttribute="bottom" id="02u-8S-R9t"/>
+                            <constraint firstItem="9pa-P5-T2C" firstAttribute="top" secondItem="kaU-U7-WTj" secondAttribute="top" id="1zH-YV-U8H"/>
+                            <constraint firstItem="9pa-P5-T2C" firstAttribute="leading" secondItem="kaU-U7-WTj" secondAttribute="leading" id="U7j-vD-OdD"/>
+                            <constraint firstItem="kaU-U7-WTj" firstAttribute="trailing" secondItem="9pa-P5-T2C" secondAttribute="trailing" id="UOr-gp-oC4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kaU-U7-WTj"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="76y-ii-Duq"/>
+                    <connections>
+                        <outlet property="authorLbl" destination="1Tl-Oz-aMX" id="Zwp-cI-v7H"/>
+                        <outlet property="descriptionTextView" destination="zYJ-3c-03F" id="ofL-Pf-BqZ"/>
+                        <outlet property="titleLbl" destination="JY8-Gs-zff" id="jbL-fJ-q9M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uie-cS-UcC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3388" y="124"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NOw-cx-bDK">
