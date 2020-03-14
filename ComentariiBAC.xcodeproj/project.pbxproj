@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4AE7EBD2241D88FB00D20517 /* Opera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE7EBD1241D88FB00D20517 /* Opera.swift */; };
+		4AE7EBD4241D89D300D20517 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE7EBD3241D89D300D20517 /* Database.swift */; };
 		4AF78C57241D3C4300763A09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF78C56241D3C4300763A09 /* AppDelegate.swift */; };
 		4AF78C59241D3C4300763A09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF78C58241D3C4300763A09 /* SceneDelegate.swift */; };
 		4AF78C5E241D3C4300763A09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AF78C5C241D3C4300763A09 /* Main.storyboard */; };
@@ -17,9 +19,13 @@
 		4AF78C70241D3CD100763A09 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF78C6F241D3CD100763A09 /* UIView+Extension.swift */; };
 		4AF78C88241D6FC400763A09 /* SelectEssayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF78C87241D6FC400763A09 /* SelectEssayVC.swift */; };
 		4AF78C8D241D78FB00763A09 /* EssayListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF78C8C241D78FB00763A09 /* EssayListVC.swift */; };
+		4AF78C91241D7B8A00763A09 /* EssayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF78C8F241D7B8900763A09 /* EssayCell.swift */; };
+		4AF78C92241D7B8A00763A09 /* EssayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF78C90241D7B8900763A09 /* EssayCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4AE7EBD1241D88FB00D20517 /* Opera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opera.swift; sourceTree = "<group>"; };
+		4AE7EBD3241D89D300D20517 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		4AF78C53241D3C4300763A09 /* ComentariiBAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComentariiBAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AF78C56241D3C4300763A09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AF78C58241D3C4300763A09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +38,8 @@
 		4AF78C6F241D3CD100763A09 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		4AF78C87241D6FC400763A09 /* SelectEssayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEssayVC.swift; sourceTree = "<group>"; };
 		4AF78C8C241D78FB00763A09 /* EssayListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayListVC.swift; sourceTree = "<group>"; };
+		4AF78C8F241D7B8900763A09 /* EssayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssayCell.swift; sourceTree = "<group>"; };
+		4AF78C90241D7B8900763A09 /* EssayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EssayCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AE7EBD0241D88ED00D20517 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4AE7EBD1241D88FB00D20517 /* Opera.swift */,
+				4AE7EBD3241D89D300D20517 /* Database.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4AF78C4A241D3C4300763A09 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +81,7 @@
 		4AF78C55241D3C4300763A09 /* ComentariiBAC */ = {
 			isa = PBXGroup;
 			children = (
+				4AE7EBD0241D88ED00D20517 /* Models */,
 				4AF78C8A241D76DF00763A09 /* Helpers */,
 				4AF78C89241D763B00763A09 /* Supporting Files */,
 				4AF78C6A241D3C5100763A09 /* Controllers */,
@@ -80,7 +98,7 @@
 			children = (
 				4AF78C6B241D3C6600763A09 /* PrincipalViewController.swift */,
 				4AF78C87241D6FC400763A09 /* SelectEssayVC.swift */,
-				4AF78C8C241D78FB00763A09 /* EssayListVC.swift */,
+				4AF78C8E241D7B5600763A09 /* EssayListVC */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -109,6 +127,16 @@
 				4AF78C6F241D3CD100763A09 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4AF78C8E241D7B5600763A09 /* EssayListVC */ = {
+			isa = PBXGroup;
+			children = (
+				4AF78C8C241D78FB00763A09 /* EssayListVC.swift */,
+				4AF78C8F241D7B8900763A09 /* EssayCell.swift */,
+				4AF78C90241D7B8900763A09 /* EssayCell.xib */,
+			);
+			path = EssayListVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +200,7 @@
 				4AF78C63241D3C4400763A09 /* LaunchScreen.storyboard in Resources */,
 				4AF78C60241D3C4400763A09 /* Assets.xcassets in Resources */,
 				4AF78C5E241D3C4300763A09 /* Main.storyboard in Resources */,
+				4AF78C92241D7B8A00763A09 /* EssayCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,10 +214,13 @@
 				4AF78C6C241D3C6600763A09 /* PrincipalViewController.swift in Sources */,
 				4AF78C8D241D78FB00763A09 /* EssayListVC.swift in Sources */,
 				4AF78C6E241D3CA200763A09 /* Constante.swift in Sources */,
+				4AE7EBD2241D88FB00D20517 /* Opera.swift in Sources */,
 				4AF78C57241D3C4300763A09 /* AppDelegate.swift in Sources */,
 				4AF78C70241D3CD100763A09 /* UIView+Extension.swift in Sources */,
 				4AF78C88241D6FC400763A09 /* SelectEssayVC.swift in Sources */,
 				4AF78C59241D3C4300763A09 /* SceneDelegate.swift in Sources */,
+				4AE7EBD4241D89D300D20517 /* Database.swift in Sources */,
+				4AF78C91241D7B8A00763A09 /* EssayCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
