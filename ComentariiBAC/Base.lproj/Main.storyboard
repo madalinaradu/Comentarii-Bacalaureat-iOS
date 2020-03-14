@@ -118,6 +118,9 @@
                                         <state key="normal" title="Comentarii Poezii">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="comPoeziiBtnPressed:" destination="e72-8e-gIf" eventType="touchUpInside" id="Qbm-1l-YYc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRI-6O-hdg">
                                         <rect key="frame" x="88" y="379" width="238" height="60"/>
@@ -128,6 +131,9 @@
                                         <state key="normal" title="Comentarii Naratiuni">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="comNaratiuniBtnPressed:" destination="e72-8e-gIf" eventType="touchUpInside" id="tw6-V5-bQZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -155,11 +161,52 @@
                         <outlet property="backgroundView" destination="MEj-gf-wXC" id="fhX-nx-XdJ"/>
                         <outlet property="comNaratiuneaBtn" destination="ZRI-6O-hdg" id="Zzj-PD-BON"/>
                         <outlet property="comPoeziiBtn" destination="GeT-TY-K9Z" id="UJg-7K-MaJ"/>
+                        <segue destination="LlO-TB-Plg" kind="show" identifier="goToEssaySelectionVC" id="pm9-IT-AyN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJ4-In-8yq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1848" y="118"/>
+        </scene>
+        <!--Essay ListVC-->
+        <scene sceneID="T04-fg-TOY">
+            <objects>
+                <viewController id="LlO-TB-Plg" customClass="EssayListVC" customModule="ComentariiBAC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i5g-vC-OqZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yO0-gB-y6L" userLabel="View - Main Content">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yTz-eQ-O8h">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="yTz-eQ-O8h" secondAttribute="trailing" id="LwP-VQ-dWU"/>
+                                    <constraint firstItem="yTz-eQ-O8h" firstAttribute="top" secondItem="yO0-gB-y6L" secondAttribute="top" id="UeU-zg-jw8"/>
+                                    <constraint firstItem="yTz-eQ-O8h" firstAttribute="leading" secondItem="yO0-gB-y6L" secondAttribute="leading" id="eJd-If-sBM"/>
+                                    <constraint firstAttribute="bottom" secondItem="yTz-eQ-O8h" secondAttribute="bottom" id="tl5-QH-EwR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0S0-hA-gDZ" firstAttribute="bottom" secondItem="yO0-gB-y6L" secondAttribute="bottom" id="2Nu-0J-HUD"/>
+                            <constraint firstItem="yO0-gB-y6L" firstAttribute="top" secondItem="0S0-hA-gDZ" secondAttribute="top" id="HWC-IC-Crk"/>
+                            <constraint firstItem="yO0-gB-y6L" firstAttribute="leading" secondItem="0S0-hA-gDZ" secondAttribute="leading" id="qS0-pw-2Ir"/>
+                            <constraint firstItem="0S0-hA-gDZ" firstAttribute="trailing" secondItem="yO0-gB-y6L" secondAttribute="trailing" id="uq7-4D-h4y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0S0-hA-gDZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OrB-St-xOM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="84U-xZ-xMt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2626" y="119"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NOw-cx-bDK">

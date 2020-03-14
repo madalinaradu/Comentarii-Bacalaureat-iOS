@@ -10,18 +10,40 @@ import UIKit
 
 class SelectEssayVC: UIViewController {
     
-
+    
     @IBOutlet var backgroundView: UIView!
     @IBOutlet var comNaratiuneaBtn: UIButton!
     @IBOutlet var comPoeziiBtn: UIButton!
     
     var selectedProfileType = ""
+    var selectedEssayType = ""
+    let segueIdentifier = "goToEssaySelectionVC"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupScreen()
         print("Selected profile type: \(selectedProfileType)")
+    }
+    
+    //    MARK: - IBActions
+    @IBAction func comNaratiuniBtnPressed(_ sender: Any) {
+        selectedEssayType = "naratiuni"
+        performSegue(withIdentifier: segueIdentifier, sender: self)
+    }
+    
+    @IBAction func comPoeziiBtnPressed(_ sender: Any) {
+        selectedEssayType = "poezii"
+        performSegue(withIdentifier: segueIdentifier, sender: self)
+        
+    }
+    //    MARK: - VC Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Create a new variable to store the instance of PlayerTableViewController
+        let destinationVC = segue.destination as? EssayListVC
+        destinationVC?.selectedProfileType = self.selectedProfileType
+        destinationVC?.selectedEssayType = self.selectedEssayType
+        
     }
     
     func setupScreen() {
